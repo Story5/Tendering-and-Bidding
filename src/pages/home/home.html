@@ -7,33 +7,42 @@
 </ion-header> -->
 
 <ion-content padding>
-  <ion-item-group>
-      <ion-item-divider color="light">基础参数</ion-item-divider>
+  <ion-card>
+    <ion-card-header>基础参数</ion-card-header>
+    <ion-list>
       <ion-item>
         <ion-label floating>评标基准价系数</ion-label>
-        <ion-input type="text" value=""></ion-input>
+        <ion-input type="text" name="baseCoefficient" [(ngModel)]="baseCoefficient"></ion-input>
       </ion-item>
     
       <ion-item>
         <ion-label floating>满分</ion-label>
-        <ion-input type="text"></ion-input>
+        <ion-input type="text" name="fullScore" [(ngModel)]="fullScore"></ion-input>
       </ion-item>
     
       <ion-item>
         <ion-label floating>高1%扣</ion-label>
-        <ion-input type="text"></ion-input>
+        <ion-input type="text" name="highDeduct" [(ngModel)]="highDeduct"></ion-input>
       </ion-item>
 
       <ion-item>
+          <ion-label floating>底1%扣</ion-label>
+          <ion-input type="text" name="lowDeduct" [(ngModel)]="lowDeduct"></ion-input>
+        </ion-item>
+
+      <ion-item>
         <ion-label floating>去掉的家数</ion-label>
-        <ion-input type="text"></ion-input>
+        <ion-input type="text" name="reduceUnit" [(ngModel)]="reduceUnit"></ion-input>
       </ion-item>
 
       <ion-item>
         <ion-label floating>控制价</ion-label>
-        <ion-input type="text"></ion-input>
+        <ion-input type="text" name="controlPrice" [(ngModel)]="controlPrice"></ion-input>
       </ion-item>
+    </ion-list>
+  </ion-card>
 
+    <ion-item-group>
       <ion-item-divider color="light">报价</ion-item-divider>
       <ion-item>
         <ion-label floating>报价单位</ion-label>
@@ -49,8 +58,11 @@
         <ion-label floating>得分</ion-label>
         <ion-input type="text"></ion-input>
       </ion-item>
-
-      <ion-item-divider color="light">计算结果</ion-item-divider>
+    </ion-item-group>
+    
+  <ion-card>
+    <ion-card-header>计算结果</ion-card-header>
+    <ion-list>
       <ion-item>
         <ion-label floating>基准价</ion-label>
         <ion-input type="text" value=""></ion-input>
@@ -65,6 +77,8 @@
         <ion-label floating>平均价*0.85</ion-label>
         <ion-input type="text"></ion-input>
       </ion-item>
-      
-  </ion-item-group>
+    </ion-list>
+  </ion-card>
+
+  <button ion-button (click)="calculate()">计算</button>
 </ion-content>
