@@ -36,7 +36,7 @@ export class HomePage {
   }
 
   calculate() {
-    alert(this.fullScore);
+    alert(this.basePrice);
   }
   
 

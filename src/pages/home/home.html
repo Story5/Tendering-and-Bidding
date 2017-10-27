@@ -65,17 +65,17 @@
     <ion-list>
       <ion-item>
         <ion-label floating>基准价</ion-label>
-        <ion-input type="text" value=""></ion-input>
+        <ion-input type="text" name="basePrice" [(ngModel)]="basePrice"></ion-input>
       </ion-item>
     
       <ion-item>
         <ion-label floating>平均价</ion-label>
-        <ion-input type="text"></ion-input>
+        <ion-input type="text" name="averagePrice" [(ngModel)]="averagePrice"></ion-input>
       </ion-item>
     
       <ion-item>
         <ion-label floating>平均价*0.85</ion-label>
-        <ion-input type="text"></ion-input>
+        <ion-input type="text" name="averagePrice85percent" [(ngModel)]="averagePrice85percent"></ion-input>
       </ion-item>
     </ion-list>
   </ion-card>
