@@ -14,6 +14,7 @@ export class HomePage {
   fullScore : number;
   // 高1%扣
   highDeduct : number;
+  
   // 底1%扣
   lowDeduct : number;
   // 去掉的家数
@@ -36,7 +37,7 @@ export class HomePage {
   }
 
   calculate() {
-    alert(this.basePrice);
+    alert(this.averagePrice);
   }
   
 
