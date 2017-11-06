@@ -8,4 +8,27 @@ import { NavController } from 'ionic-angular';
 
 export class RecordAudioPage {
 
+  constructor(public navCtrl: NavController) {
+    
+  }
+
+  startRecord() {
+
+  }
+
+  stopRecord() {
+
+  }
+
+  play() {
+
+  }
+
+  pause() {
+
+  }
+
+  stop() {
+    
+  }
 }
