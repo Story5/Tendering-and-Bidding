@@ -4,7 +4,7 @@ import { NavController } from 'ionic-angular';
 import { Media, MediaObject } from '@ionic-native/media';
 import { File } from '@ionic-native/file';
 
-import { LoadingController } from 'ionic-angular';
+import { LoadingController,LoadingOptions } from 'ionic-angular';
 
 @Component({
   selector: 'page-recordAudio',
@@ -50,10 +50,18 @@ export class RecordAudioPage {
   }
 
   presentLoading(text:string) {
-    let loader = this.loadingCtrl.create({
-      content: text,
+
+    const opts : LoadingOptions = {
+      spinner: 'bubbles',
+      content: '开始录音...',
+      cssClass: "",
+      showBackdrop: true,
+      enableBackdropDismiss: false,
+      dismissOnPageChange: false,
       duration: 3000
-    });
+    }
+
+    let loader = this.loadingCtrl.create(opts);
     loader.present();
   }
 }

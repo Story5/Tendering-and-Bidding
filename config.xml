@@ -84,4 +84,5 @@
     <engine name="android" spec="~6.3.0" />
     <plugin name="cordova-plugin-media" spec="^3.0.1" />
     <plugin name="cordova-plugin-file" spec="^4.3.3" />
+    <engine name="ios" spec="~4.4.0" />
 </widget>
