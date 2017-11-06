@@ -21,6 +21,7 @@
         "@angular/platform-browser": "4.4.3",
         "@angular/platform-browser-dynamic": "4.4.3",
         "@ionic-native/core": "4.3.0",
+        "@ionic-native/file": "^4.3.3",
         "@ionic-native/media": "^4.3.3",
         "@ionic-native/splash-screen": "4.3.0",
         "@ionic-native/status-bar": "4.3.0",
@@ -52,7 +53,8 @@
             "cordova-plugin-splashscreen": {},
             "cordova-plugin-whitelist": {},
             "ionic-plugin-keyboard": {},
-            "cordova-plugin-media": {}
+            "cordova-plugin-media": {},
+            "cordova-plugin-file": {}
         },
         "platforms": [
             "android"
