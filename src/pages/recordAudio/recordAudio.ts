@@ -4,6 +4,8 @@ import { NavController } from 'ionic-angular';
 import { Media, MediaObject } from '@ionic-native/media';
 import { File } from '@ionic-native/file';
 
+import { LoadingController } from 'ionic-angular';
+
 @Component({
   selector: 'page-recordAudio',
   templateUrl: 'recordAudio.html'
@@ -16,7 +18,8 @@ export class RecordAudioPage {
 
   constructor(public navCtrl: NavController,
               public media: Media,
-              public file: File,) {
+              public file: File,
+              public loadingCtrl: LoadingController,) {
     
   }
 
@@ -26,6 +29,8 @@ export class RecordAudioPage {
     this.recordPath = this.file.externalApplicationStorageDirectory + recordFileName + '.mp3';
     this.mediaObject = this.media.create(this.recordPath);
     this.mediaObject.startRecord();
+
+    this.presentLoading("正在录音...");
   }
 
   stopRecord() {
@@ -42,5 +47,13 @@ export class RecordAudioPage {
 
   stop() {
     this.mediaObject.stop();
+  }
+
+  presentLoading(text:string) {
+    let loader = this.loadingCtrl.create({
+      content: text,
+      duration: 3000
+    });
+    loader.present();
   }
 }
