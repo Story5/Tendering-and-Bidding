@@ -34,7 +34,11 @@ export class RecordAudioPage {
     if (this.device.platform == 'Android') {
      this.mediaObject = this.media.create(this.recordPath);
     } else if (this.device.platform == 'iOS') {
-      this.mediaObject = this.media.create(this.file.tempDirectory.replace(/^file:\/\//, '') + 'iOSRecord.m4a');
+      // let format = '.caf';
+      let format = '.m4a';
+      let iOSPath = this.file.tempDirectory.replace(/^file:\/\//, '') + 'iOSRecord'+ format;
+      alert('iOSPath' + iOSPath);
+      this.mediaObject = this.media.create(iOSPath);
     }
     
     this.mediaObject.startRecord();
