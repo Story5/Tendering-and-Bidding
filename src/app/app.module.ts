@@ -4,6 +4,7 @@ import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 
+import { Device } from '@ionic-native/device';
 import { Media } from '@ionic-native/media';
 import { File } from '@ionic-native/file';
 
@@ -33,6 +34,7 @@ import { PriceCalPage } from '../pages/priceCal/priceCal';
   providers: [
     StatusBar,
     SplashScreen,
+    Device,
     Media,
     File,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
