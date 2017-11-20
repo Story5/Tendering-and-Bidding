@@ -7,6 +7,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { Device } from '@ionic-native/device';
 import { Media } from '@ionic-native/media';
 import { File } from '@ionic-native/file';
+import { FileTransfer } from '@ionic-native/file-transfer';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
@@ -37,6 +38,7 @@ import { PriceCalPage } from '../pages/priceCal/priceCal';
     Device,
     Media,
     File,
+    FileTransfer,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
