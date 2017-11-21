@@ -8,6 +8,7 @@ import { Device } from '@ionic-native/device';
 import { Media } from '@ionic-native/media';
 import { File } from '@ionic-native/file';
 import { FileTransfer } from '@ionic-native/file-transfer';
+import { IonJPushModule } from 'ionic2-jpush'
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
@@ -23,6 +24,7 @@ import { PriceCalPage } from '../pages/priceCal/priceCal';
   ],
   imports: [
     BrowserModule,
+    IonJPushModule,
     IonicModule.forRoot(MyApp)
   ],
   bootstrap: [IonicApp],
