@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 
 import { File } from '@ionic-native/file';
-import { FileTransfer, FileUploadOptions, FileTransferObject, FileUploadResult, FileTransferError } from '@ionic-native/file-transfer';
+import { FileTransfer, FileTransferObject } from '@ionic-native/file-transfer';
 
 import { RecordAudioPage } from '../recordAudio/recordAudio'
 import { PriceCalPage } from '../priceCal/priceCal'
@@ -26,6 +26,10 @@ export class HomePage {
 
   jumpToPriceCalPage() {
     this.navCtrl.push(PriceCalPage);
+  }
+
+  jpushinit() {
+    Window
   }
 
   downloadFile() {
