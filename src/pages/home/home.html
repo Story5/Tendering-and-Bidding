@@ -7,20 +7,18 @@
 </ion-header>
 
 <ion-content padding>
-  <ion-grid>
-    <ion-row>
-      <ion-col col-12>
-        <button ion-button clear (click)="jumpToRecordAudioPage()">录音</button>
-      </ion-col>
-      <ion-col col-12>
-        <button ion-button clear (click)="jumpToPriceCalPage()">工程造价</button>
-      </ion-col>
-      <ion-col col-12>
-        <button ion-button clear (click)="downloadFile()">下载文件</button>
-      </ion-col>
-      <ion-col col-12>
-        <button ion-button clear (click)="downloadFile()">极光推送</button>
-      </ion-col>
-    </ion-row>
-  </ion-grid>
+  <ion-list>
+    <ion-item>
+      <button ion-button clear (click)="jumpToRecordAudioPage()">录音</button>
+    </ion-item>
+    <ion-item>
+      <button ion-button clear (click)="jumpToPriceCalPage()">工程造价</button>
+    </ion-item>
+    <ion-item>
+      <button ion-button clear (click)="downloadFile()">下载文件</button>
+    </ion-item>
+    <ion-item>
+      <button ion-button clear (click)="downloadFile()">极光推送</button>
+    </ion-item>
+  </ion-list>
 </ion-content>
